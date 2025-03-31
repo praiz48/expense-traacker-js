@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>Track your expense properly</h1></header>
+    <main>
+      <div class="left-side">
+        <h1 id="total">$0</h1>
+        <select id="category" name="category">
+          <option value="All">All</option>
+          <option value="food">Food</option>
+          <option value="transport">Transport</option>
+          <option value="clothing">Clothing</option>
+        </select>
+
+        <ul class="allexpenses"></ul>
+      </div>
+      <div class="right-side">
+        <form>
+          <input type="number" min="1" placeholder="amount spent" id="amount" />
+          <br /><br /><input
+            type="text"
+            placeholder="specify what you spent"
+            id="description"
+          />
+
+          <ul class="buttons">
+            <li>
+              <h4>category:</h4>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="category" value="food" />Food
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input
+                  type="radio"
+                  name="category"
+                  value="transport"
+                />Transport
+              </label>
+            </li>
+
+            <li>
+              <label>
+                <input type="radio" name="category" value="clothing" />clothing
+              </label>
+            </li>
+          </ul>
+          <input type="button" value="add expense" onclick="display()" />
+        </form>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
