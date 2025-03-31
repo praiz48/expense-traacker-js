@@ -55,7 +55,7 @@ function updateExpenseList(expensed) {
     )
     .join(""); // Convert array into a single string
   total = 0;
-  expenses.forEach((expense) => {
+  expensed.forEach((expense) => {
     total += expense.amount;
   });
   total_header.textContent = `$${total}`;
@@ -66,9 +66,8 @@ function display() {
   const category = document.querySelector(
     'input[name="category"]:checked'
   ).value;
-
-  //   console.log(amount);
-  //   console.log(category);
-  //   console.log(despricption);
+  document.getElementById("amount").value = "1";
+  document.getElementById("description").value = "";
+  document.querySelector('input[name="category"]:checked').checked = false;
   addExpense(category, despricption, amount);
 }
