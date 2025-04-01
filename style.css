@@ -63,6 +63,9 @@ main {
         background: #3700b3;
       }
     }
+    #save-button {
+      display: none;
+    }
   }
 }
 .left-side {
@@ -122,9 +125,8 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-  }
-
-  .allexpenses button:hover {
-    background: #b71c1c;
+    &:hover {
+      background: #b71c1c;
+    }
   }
 }
